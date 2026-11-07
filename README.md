@@ -1,6 +1,6 @@
 # WisdomAI technical workshop for the Teradata field
 
-A reusable, one-day technical workshop for 25 sales engineers, built around the TD-AirlineDemo domain and Airline Command Cockpit. The story moves from an executive scorecard to route economics, operational reliability, customer experience, and verifiable answers.
+A reusable, one-day technical workshop for sales engineers, built around the TD-AirlineDemo domain and Airline Command Cockpit. The story moves from an executive scorecard to route economics, operational reliability, customer experience, and verifiable answers.
 
 ## Start here
 
