@@ -11,7 +11,7 @@
 - [x] Semantic holdout passed 16/16; numerical/storage suite passed 5/5, each in one recorded Thinking run.
 - [x] Synthetic eight-note table, retrieval configuration, citations and derived scenario counts demonstrated.
 - [x] Derived classification column previewed on all eight notes; invented facilitator brief uploaded.
-- [ ] Check facilitator file processing and cited retrieval (Mac locked before recheck; last status Waiting).
+- [x] Facilitator file processing Success; cited retrieval returned seven required handoff items and the correct completion criterion with synthetic disclosure.
 - [x] Health recommendations addressed: clarify the synthetic summary table and ambiguous customer segmentation.
 - [x] Final native export saved locally; portable references and validation evidence prepared.
 - [x] Eight labs, instructor guide, prompt bank and prospect talk track written.

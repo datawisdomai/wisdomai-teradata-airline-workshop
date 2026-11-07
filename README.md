@@ -23,7 +23,7 @@ Verified from the November 6, 2026 evening build (export timestamp November 7 UT
 | Reviewed SQL queries | 31 |
 | Training questions with accepted matches | 30 |
 | Synthetic storage table / derived summary / derived column | 1 / 1 / 1 |
-| Invented practice document uploaded | 1 (processing not yet verified) |
+| Invented practice document uploaded | 1 (processed; cited retrieval checked) |
 | Semantic holdout, Thinking mode | 16/16 |
 | Numerical and storage checks, Thinking mode | 5/5 |
 

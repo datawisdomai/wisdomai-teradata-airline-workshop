@@ -21,7 +21,7 @@ This inventory distinguishes demonstrated configuration from options that requir
 | Skills | Six analytical playbooks imported. Attendees inspect retrieval and procedure adherence during Lab 6; every possible skill invocation has not been independently scored. |
 | Storage table | Eight invented notes with PK, content retrieval and scenario filtering. |
 | Storage derived table | Six scenario counts; description distinguishes aggregate counts from source narratives. |
-| Storage files | Invented facilitator brief uploaded successfully as a text file. Last observed status: Waiting; Mac locked before recheck. Processing and file-specific retrieval must be checked separately from the already-passing notes-table retrieval suite. |
+| Storage files | Invented facilitator brief processed successfully. A separate Thinking-mode chat returned the seven handoff requirements, correct completion criterion, synthetic disclosure, and citations to the actual document. This file check is separate from the five-case notes/numeric suite. |
 | Health | Two surfaced recommendations addressed. Reanalysis is a maintenance step; no permanent clean-health guarantee. |
 | Changelog | Available for inspecting changes and demonstrating traceability; not exported as an audit certification. |
 | Calendar and timezone | Existing settings inspected and retained. No source timezone/currency or custom fiscal convention inferred from UI defaults. |

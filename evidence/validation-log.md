@@ -10,7 +10,7 @@ The original baseline had no knowledge, metrics, synonyms, entities, skills, tra
 
 The 49 relationships were checked against context/relationships.csv. An interrupted save had omitted the ticket-to-sales-channel relationship; the final export confirmed its correction. Four COUNT(*) metrics did not bind during import; explicit table-qualified key counts saved successfully, bringing the exported metric total to 43. The offline integrity check validates referenced columns, not the numerical correctness of every metric.
 
-After that export, a derived classification column was added to the synthetic note table; its preview showed “Synthetic workshop data” for all eight rows. An invented facilitator brief was uploaded successfully as a file. Its initial status was Waiting. The Mac initially locked before the processing/retrieval recheck; after unlocking, the file still showed Waiting. Do not equate upload success with file retrieval readiness.
+After that export, a derived classification column was added to the synthetic note table; its preview showed “Synthetic workshop data” for all eight rows. An invented facilitator brief was uploaded successfully as a file. Its initial status was Waiting. After unlocking and refreshing storage, the listing showed Success with a processed timestamp of November 6 at 8:00 PM Pacific. On November 7, a separate Thinking-mode chat returned all seven handoff requirements and the exact completion criterion, cited WORKSHOP_SYNTHETIC_facilitator_brief.txt, and identified it as invented workshop material rather than airline policy. The original five-case numerical/storage suite did not include this later file check.
 
 ## Executed source checks
 
@@ -48,3 +48,5 @@ The completed analysis surfaced two high-priority recommendations. One was a mis
 ## Distribution and remaining dependencies
 
 Portable assets exclude the full native instance backup and actor metadata. The private GitHub destinations are aalladin/wisdomai-teradata-airline-workshop and datawisdomai/wisdomai-teradata-airline-workshop. The WisdomAI copy was pushed with Git; the personal copy uses its separate authenticated browser session. Attendee access, isolated exercise domains, source currency/timezone confirmation, complete talk-track rehearsal and the separate Tera Analyze environment remain event-preparation tasks.
+
+File check question: Using only WS-BRIEF-001, what must each group hand to the next group, and what defines completion? Verified answer: business question, exact prompt, source and period basis, one checked number, metric definition, limitations, suggested follow-up; completion when another group can reproduce the answer and explain the evidence and limitations. All three document citations targeted the uploaded facilitator brief.

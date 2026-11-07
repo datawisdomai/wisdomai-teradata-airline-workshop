@@ -26,6 +26,14 @@
   "primary_key_columns": 19,
   "derived_columns": 1,
   "storage_files_uploaded": 1,
-  "storage_file_last_observed_status": "Waiting",
-  "browser_check_blocker": "File remains Waiting after unlock; retrieval not yet verified"
+  "storage_file_last_observed_status": "Success",
+  "file_retrieval_check": {
+    "mode": "Thinking",
+    "passed": true,
+    "required_handoff_items": 7,
+    "completion_criterion_correct": true,
+    "synthetic_disclosure": true,
+    "document_citations_verified": true,
+    "checked_date_pacific": "2026-11-07"
+  }
 }
