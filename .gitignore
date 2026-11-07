@@ -1,0 +1,12 @@
+.env
+.env.*
+*.pem
+*.p8
+*.key
+credentials*
+__pycache__/
+evidence/*session*
+evidence/*token*
+
+# Native instance backup contains environment and actor identifiers. Keep local.
+evidence/domain-export*.json

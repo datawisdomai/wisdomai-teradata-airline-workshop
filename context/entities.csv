@@ -1,0 +1,12 @@
+Entity,ID Column,Name Column,Default Sort Column,Default Sort Order,Related Columns
+Airport,ZAL_DIM_AIRPORT.airport_key,ZAL_DIM_AIRPORT.airport_name,,Ascending,
+Aircraft,ZAL_DIM_AIRCRAFT.aircraft_key,ZAL_DIM_AIRCRAFT.tail_number,,Ascending,
+Aircraft Type,ZAL_DIM_AIRCRAFT_TYPE.aircraft_type_key,ZAL_DIM_AIRCRAFT_TYPE.type_name,,Ascending,
+Carrier,ZAL_DIM_CARRIER.carrier_key,ZAL_DIM_CARRIER.carrier_name,,Ascending,
+Sales Channel,ZAL_DIM_SALES_CHANNEL.sales_channel_key,ZAL_DIM_SALES_CHANNEL.channel_name,,Ascending,
+Fare Product,ZAL_DIM_FARE_PRODUCT.fare_product_key,ZAL_DIM_FARE_PRODUCT.fare_name,,Ascending,
+Ancillary Product,ZAL_DIM_ANCILLARY_PRODUCT.ancillary_product_key,ZAL_DIM_ANCILLARY_PRODUCT.product_name,,Ascending,
+Card Product,ZAL_DIM_CARD_PRODUCT.card_product_key,ZAL_DIM_CARD_PRODUCT.product_name,,Ascending,
+Campaign,ZAL_DIM_CAMPAIGN.campaign_key,ZAL_DIM_CAMPAIGN.campaign_name,,Ascending,
+Delay Cause,ZAL_DIM_DELAY_CAUSE.delay_cause_key,ZAL_DIM_DELAY_CAUSE.cause_name,,Ascending,
+Route,ZAL_DIM_ROUTE.route_key,ZAL_DIM_ROUTE.route_code,,Ascending,

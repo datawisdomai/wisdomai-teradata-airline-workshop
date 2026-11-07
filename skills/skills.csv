@@ -1,0 +1,39 @@
+Name,Description,Instructions
+Airline route profitability review,"Use for route profitability, network economics, PRASM/CASM, and budget performance reviews.","1. Resolve period and comparison.
+2. Use route-month P&L and verify coverage.
+3. Report revenue, operating cost, income and ratio-of-sums margin, load factors, RASM and CASM as relevant.
+4. Compare actuals with budget and prior period using matched coverage.
+5. Rank material gaps; distinguish size from rate.
+6. Explain source units and limitations; do not claim demand forecasts or causal drivers."
+Airline operational reliability review,"Use for punctuality, cancellations, delays, carrier, fleet, or airport reliability reviews.","1. Resolve travel period.
+2. Use flight-grain view.
+3. Count scheduled flights, cancellations and diversions separately.
+4. Calculate arrival OTP only among non-cancelled, non-diverted flights.
+5. Segment by route, carrier, airport or fleet with volumes.
+6. Treat weather and inbound delay as associations; validate joins at airport-day grain.
+7. Summarize observations and investigation priorities."
+Airline customer experience review,"Use for NPS, satisfaction, service cases, baggage claims, or customer experience diagnosis.","1. State event-date basis for each subject.
+2. Compute survey NPS from valid responses, with sample size.
+3. Analyze service cases and baggage claims independently; never multiply facts through detail joins.
+4. Keep money and miles compensation separate.
+5. Compare cohorts with adequate samples and label associations.
+6. Summarize evidence, limitations and follow-up questions."
+Airline loyalty and co-brand review,"Use for loyalty activity, miles balances, card accounts or partner remuneration analysis.","1. Resolve month and historical tier basis.
+2. Treat balances, YTD measures and active-account counts as snapshots.
+3. Separate customer-month, account-month and product-month facts.
+4. Distinguish cardholder spend from airline revenue.
+5. Calculate remuneration less program cost for net remuneration.
+6. Report activity and balances separately; do not assert retention effects."
+Airline commercial performance review,"Use for ticket sales, channels, cabins, fare products, ancillaries and commercial mix analysis.","1. Resolve booking versus travel versus purchase period.
+2. Use ticket segment for ticket measures and ancillary sales for net ancillary transactions.
+3. State boarded/award/revenue eligibility rules rather than guessing them.
+4. Use independent aggregates when comparing facts.
+5. Compare revenue, volume, mix and distribution cost.
+6. Do not invent named-account commitments or confuse total fare with recognized passenger revenue."
+Airline technical answer validation,"Use when validating an airline answer, troubleshooting SQL, or preparing a workshop demonstration.","1. Inspect selected sources and native grains.
+2. Check date basis, coverage and filters.
+3. Check joins, duplicate keys, row counts and fanout.
+4. Recompute ratios from sums and snapshots at a single date.
+5. Execute reference SQL and compare results using stated tolerances.
+6. Record failures and corrections.
+7. Keep holdout questions separate from reviewed training examples; do not mark unexecuted SQL as validated."

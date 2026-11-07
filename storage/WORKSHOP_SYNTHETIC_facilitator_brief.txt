@@ -1,0 +1,18 @@
+WORKSHOP_SYNTHETIC facilitator brief
+Document ID: WS-BRIEF-001
+Status: invented teaching document, not airline policy or actual customer evidence.
+
+Purpose
+The practice exercise is to prepare an evidence-backed September 2026 business review using the demonstration airline domain.
+
+Required handoff
+Each group hands the next group its business question, exact prompt, source and period basis, one checked number, metric definition, limitations, and suggested follow-up question.
+
+Working rule
+Keep route financials, flight operations, and survey evidence at their appropriate grains. Compare separately aggregated results. Do not turn observed associations into causal conclusions.
+
+Source limits
+This document does not establish currency, exchange rates, source timezone, official business targets, passenger incidents, or any real airline policy.
+
+Completion
+A group completes the practice exercise when another group can reproduce its answer and explain the evidence and limitations.

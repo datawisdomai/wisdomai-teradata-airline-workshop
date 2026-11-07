@@ -1,0 +1,9 @@
+note_id,scenario,note_text,synthetic_flag
+SYN-001,weather,Synthetic exercise: a thunderstorm interrupted boarding; the passenger praised proactive rebooking.,1
+SYN-002,baggage,Synthetic exercise: a transfer bag arrived two days late; status updates were unclear.,1
+SYN-003,wifi,Synthetic exercise: Wi-Fi was unavailable; the passenger requested a refund.,1
+SYN-004,accessibility,Synthetic exercise: assistance at the gate was prompt and courteous.,1
+SYN-005,service,Synthetic exercise: a long contact-center wait followed a cancellation.,1
+SYN-006,cabin,"Synthetic exercise: an upgrade was appreciated, but the seat power outlet failed.",1
+SYN-007,baggage,Synthetic exercise: baggage tracking notifications reduced uncertainty.,1
+SYN-008,service,Synthetic exercise: the first agent resolved a duplicate charge.,1

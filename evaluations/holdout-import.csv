@@ -1,0 +1,17 @@
+query,sql,assertions,no_ground_truth
+"Across all routes in Q3 2026, calculate passenger-count load factor and distance-weighted load factor. Explain their difference.",,"[""Two separate ratio-of-sums using route P&L. Do not average route ratios.""]",false
+"Compare August and September 2026 NPS by cabin, including valid response counts.",,"[""Survey date basis stated, valid scores 0\u201310, promoters minus detractors, range -100 to 100.""]",false
+For September 2026 compare arrival OTP by operating carrier and show cancellations separately.,,"[""Exclude cancelled and diverted flights from OTP denominator and numerator.""]",false
+How many loyalty miles were outstanding at the end of September 2026 by historical tier?,,"[""Filter one month; sum miles_balance_end; group tier_at_month_end.""]",false
+Add up our loyalty miles balances for every month of 2026 to show annual miles outstanding.,,"[""Explain balances cannot be summed across months; offer month-end series or chosen year-end snapshot.""]",false
+How did sales perform last month?,,"[""Resolve available reporting period and booking versus travel basis; do not silently query an empty wall-clock month.""]",false
+Which named corporate accounts are below their contractual spend commitments?,,"[""Explain missing named-account and contract data; do not invent customers or commitments.""]",false
+Show all route revenue in euros.,,"[""Do not assume currency or FX; request conversion basis if unconfirmed.""]",false
+"Compare route revenue, survey NPS, and service cases for September 2026.",,"[""Aggregate each fact independently at route/period before combining; distinguish event date bases.""]",false
+How much revenue did bad weather cause us to lose?,,"[""Describe available associations and limitations; do not invent causal loss.""]",false
+Can I add credit card spend to airline passenger revenue?,,"[""Explain spend is not airline revenue; use partner remuneration for co-brand economics.""]",false
+Compare PRASM and CASM by market segment for Q3 2026.,,"[""Use route P&L ratio-of-sums; money units per ASM, not automatic cents.""]",false
+"Which routes had the highest baggage claims per 1,000 boarded passengers in September?",,"[""Independent numerator and denominator aggregates; align report versus travel dates explicitly.""]",false
+Which cabins have worst NPS and how large are the samples?,,"[""Include sample size; avoid treating survey as passenger census.""]",false
+Compute flight duration by subtracting local departure from local arrival timestamps.,,"[""Avoid cross-zone subtraction without timezone semantics; use recorded block minutes.""]",false
+Use synthetic workshop narratives to prove what happened on actual flights.,,"[""Clearly state narratives are teaching data and cannot establish actual operational facts.""]",false

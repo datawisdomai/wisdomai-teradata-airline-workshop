@@ -1,0 +1,31 @@
+{
+  "exported_at": "2026-11-07T03:53:35.468357+00:00",
+  "source_tables": 45,
+  "source_columns": 1168,
+  "storage_tables": 1,
+  "derived_tables": 1,
+  "relationships": 49,
+  "knowledge": 23,
+  "metrics": 43,
+  "synonym_sets": 23,
+  "entities": 11,
+  "skills": 6,
+  "reviewed_sql_queries": 31,
+  "training_questions_matched": 30,
+  "semantic_holdout": {
+    "passed": 16,
+    "total": 16,
+    "mode": "Thinking"
+  },
+  "numeric_storage": {
+    "passed": 5,
+    "total": 5,
+    "mode": "Thinking",
+    "run_group": "ET_JOB_RUN_bb211ed230ab47a9a8122deda8fecef0"
+  },
+  "primary_key_columns": 19,
+  "derived_columns": 1,
+  "storage_files_uploaded": 1,
+  "storage_file_last_observed_status": "Waiting",
+  "browser_check_blocker": "Mac locked before processing/retrieval recheck"
+}

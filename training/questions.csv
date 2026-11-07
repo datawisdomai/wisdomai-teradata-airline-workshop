@@ -1,0 +1,31 @@
+Question
+"For September 2026, what are the flight measures by route code, using flight date as the period basis?"
+What is the available date range and row count for flight?
+"For September 2026, what are the flight cabin load measures by cabin, using flight date as the period basis?"
+What is the available date range and row count for flight cabin load?
+"For September 2026, what are the ticket segment measures by channel group, using flight date as the period basis?"
+What is the available date range and row count for ticket segment?
+"For September 2026, what are the ancillary sale measures by ancillary category, using purchase date as the period basis?"
+What is the available date range and row count for ancillary sale?
+"For September 2026, what are the baggage claim measures by claim type, using report date as the period basis?"
+What is the available date range and row count for baggage claim?
+"For September 2026, what are the service case measures by case type, using opened date as the period basis?"
+What is the available date range and row count for service case?
+"For September 2026, what are the passenger survey measures by route code, using survey date as the period basis?"
+What is the available date range and row count for passenger survey?
+"For September 2026, what are the maintenance event measures by event type, using start date as the period basis?"
+What is the available date range and row count for maintenance event?
+"For September 2026, what are the crew assignment measures by crew role on flight, using flight date as the period basis?"
+What is the available date range and row count for crew assignment?
+"For September 2026, what are the loyalty monthly measures by tier at month end, using month end date as the period basis?"
+What is the available date range and row count for loyalty monthly?
+"For September 2026, what are the card account monthly measures by card product name, using month end date as the period basis?"
+What is the available date range and row count for card account monthly?
+"For September 2026, what are the card application measures by card product name, using application date as the period basis?"
+What is the available date range and row count for card application?
+"For September 2026, what are the partner remuneration monthly measures by card product name, using month end date as the period basis?"
+What is the available date range and row count for partner remuneration monthly?
+"For September 2026, what are the route pnl monthly measures by route code, using month end date as the period basis?"
+What is the available date range and row count for route pnl monthly?
+"For September 2026, what are the airport day weather measures by iata code, using weather date as the period basis?"
+What is the available date range and row count for airport day weather?
