@@ -10,7 +10,7 @@ The original baseline had no knowledge, metrics, synonyms, entities, skills, tra
 
 The 49 relationships were checked against context/relationships.csv. An interrupted save had omitted the ticket-to-sales-channel relationship; the final export confirmed its correction. Four COUNT(*) metrics did not bind during import; explicit table-qualified key counts saved successfully, bringing the exported metric total to 43. The offline integrity check validates referenced columns, not the numerical correctness of every metric.
 
-After that export, a derived classification column was added to the synthetic note table; its preview showed “Synthetic workshop data” for all eight rows. An invented facilitator brief was uploaded successfully as a file. Its initial status was Waiting. The Mac locked before the processing/retrieval recheck. Do not equate upload success with file retrieval readiness.
+After that export, a derived classification column was added to the synthetic note table; its preview showed “Synthetic workshop data” for all eight rows. An invented facilitator brief was uploaded successfully as a file. Its initial status was Waiting. The Mac initially locked before the processing/retrieval recheck; after unlocking, the file still showed Waiting. Do not equate upload success with file retrieval readiness.
 
 ## Executed source checks
 
@@ -47,4 +47,4 @@ The completed analysis surfaced two high-priority recommendations. One was a mis
 
 ## Distribution and remaining dependencies
 
-Portable assets exclude the full native instance backup and actor metadata. Exact personal and WisdomAI GitHub destinations have not been supplied, so no remote publication is claimed. Attendee access, isolated exercise domains, source currency/timezone confirmation, complete talk-track rehearsal and the separate Tera Analyze environment remain event-preparation tasks.
+Portable assets exclude the full native instance backup and actor metadata. The private GitHub destinations are aalladin/wisdomai-teradata-airline-workshop and datawisdomai/wisdomai-teradata-airline-workshop. The WisdomAI copy was pushed with Git; the personal copy uses its separate authenticated browser session. Attendee access, isolated exercise domains, source currency/timezone confirmation, complete talk-track rehearsal and the separate Tera Analyze environment remain event-preparation tasks.

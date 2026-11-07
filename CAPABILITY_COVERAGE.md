@@ -31,6 +31,6 @@ This inventory distinguishes demonstrated configuration from options that requir
 | Recommended questions | Existing nine suggestions retained; some are generic/overlapping. Use the curated PROMPTS.md bank for the workshop; segment ambiguity now prompts clarification. |
 | LiveApp | Existing Airline Command Cockpit reused. No claim that the repository exports/recreates its application code. |
 | Tera Analyze in AI Studio | Separate environment and OEM demonstration required. Standalone WisdomAI results do not verify OEM capability or UI parity. |
-| Distribution | Local Git kit prepared. Remote publication awaits exact personal and WisdomAI repository destinations. |
+| Distribution | Private repositories under datawisdomai and aalladin. WisdomAI copy is upstream; personal copy uses browser commits with matching versioned content. See README. |
 
 For future extensions, add a feature only when it helps a business question or a learning objective, then record its validation. Do not manufacture currency definitions, historical attributes, security policies or customer evidence to fill a configuration field.

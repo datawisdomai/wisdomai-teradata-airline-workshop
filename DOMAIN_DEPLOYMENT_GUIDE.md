@@ -60,6 +60,6 @@ Health → Run Analysis may take time. Review both User-facing and Proactive cat
 
 ## 6. Export, share and maintain
 
-Export final metadata, metrics and reviewed SQL, plus run screenshots and aggregate source checks. Exclude native instance backups, credentials, raw customer records and session data from Git. Keep `evidence/validation-summary.json` current. Commit reusable assets and publish the same commit to the two identified GitHub repositories, with one documented upstream.
+Export final metadata, metrics and reviewed SQL, plus run screenshots and aggregate source checks. Exclude native instance backups, credentials, raw customer records and session data from Git. Keep `evidence/validation-summary.json` current. Commit reusable assets and publish the same versioned content to the two identified GitHub repositories, with one documented upstream.
 
 After a source refresh or context change, rerun affected SQL checks and both suites. Rehearse the LiveApp story. Do not assume that this kit automatically recreates the existing cockpit, configures organization permissions, or reproduces the separate Tera Analyze experience.

@@ -27,5 +27,5 @@
   "derived_columns": 1,
   "storage_files_uploaded": 1,
   "storage_file_last_observed_status": "Waiting",
-  "browser_check_blocker": "Mac locked before processing/retrieval recheck"
+  "browser_check_blocker": "File remains Waiting after unlock; retrieval not yet verified"
 }
