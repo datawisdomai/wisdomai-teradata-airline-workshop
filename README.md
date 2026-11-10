@@ -46,7 +46,9 @@ Replace the `Ali-TD` connection label and `wisdomai` database bindings before im
 
 Run `python3 validate_assets.py` to check asset structure, references and expected coverage. Live SQL execution, source reconciliation and evaluations are still required in each new environment.
 
-The reference source is [datawisdomai/wisdomai-teradata-airline-workshop](https://github.com/datawisdomai/wisdomai-teradata-airline-workshop). The personal copy is [aalladin/wisdomai-teradata-airline-workshop](https://github.com/aalladin/wisdomai-teradata-airline-workshop). Both repositories are private. Use the WisdomAI repository as upstream and synchronize versioned content to the personal copy to prevent drift. The initial personal upload uses browser commits, so its Git history differs from the local/upstream history. No license or public-release policy is assumed.
+The working repository is [ali-wisdom/wisdomai-teradata-airline-workshop](https://github.com/ali-wisdom/wisdomai-teradata-airline-workshop). The shared WisdomAI copy is [datawisdomai/wisdomai-teradata-airline-workshop](https://github.com/datawisdomai/wisdomai-teradata-airline-workshop). Both are private. Make workshop revisions in the ali-wisdom working repository, validate them, then synchronize the same content to datawisdomai. The earlier aalladin copy is a historical copy and is no longer the working source. Git histories can differ because some copies were created through browser uploads. No license or public-release policy is assumed.
+
+Review the workshop steps before downloading the attendee ZIP. Start with DOMAIN_DEPLOYMENT_GUIDE.md and WORKSHOP_LABS.md; record any unclear or inaccurate step so it can be corrected in both active repositories before distribution.
 
 ## Seed generators
 

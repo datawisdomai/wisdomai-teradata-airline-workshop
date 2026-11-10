@@ -18,7 +18,7 @@
 
 ## Explicit limits and deployment work
 
-- [x] GitHub destinations identified: aalladin and datawisdomai, repository wisdomai-teradata-airline-workshop. See README for links and distribution details.
+- [x] GitHub working destination: ali-wisdom; shared destination: datawisdomai; repository wisdomai-teradata-airline-workshop. See README for review and distribution workflow.
 - [ ] Confirm each attendee's access and the isolation/clone arrangement in the actual workshop environment.
 - [ ] Rehearse the complete prospect sequence and record the selected route; only the underlying checkpoints and listed regression cases have been validated.
 - [ ] Validate Tera Analyze within AI Studio separately; this standalone domain does not establish OEM parity.
