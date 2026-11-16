@@ -1,218 +1,103 @@
-# WisdomAI workshop: attendee demo guide
+# WisdomAI concepts workshop — three-hour student guide
 
-**Start here. Follow the numbered steps on this page, in order.** This is a hands-on demo using an already prepared airline domain. You do not need to build a domain, configure a connection, import CSVs, install Git or Python, or run the repository's scripts.
+**Students: start here, then follow the [step-by-step workbook](WORKSHOP_LABS.md).** Keep GitHub open beside the [Teradata WisdomAI instance](https://teradata.wisdom.ai). Your instructor will explain and demonstrate each concept, then pause for you to complete the corresponding exercise.
 
-The story you will demonstrate: **The airline is filling seats. Where should leadership focus to protect profit and passenger trust?**
+This workshop teaches you to **design a domain, build business context, define calculations and analytical procedures, review generated SQL, and test answers**. You will build small, meaningful examples and explain why they belong in the domain. The airline scenario supplies the data; a product demo is one application of what you learn.
 
-By the end, you will have asked business questions, followed an investigation, checked the evidence behind an answer, used cited text, and explained how context, skills, training and evaluations support the demo.
+## What to open
 
-## Before you begin — two browser tabs
+1. **This README:** the class agenda and navigation.
+2. **[Student workbook](WORKSHOP_LABS.md):** numbered actions, examples, checks, and what to record for every exercise.
+3. **[Glossary](GLOSSARY.md):** plain-language definitions and airline examples. Keep it available throughout.
+4. **Teradata WisdomAI:** sign in and find **CSA Workshop - Facilitator**, the prepared reference domain, or the domain your instructor assigns.
 
-1. Keep this GitHub page open in **Tab 1**. You can copy every prompt directly from this README; downloading a ZIP is optional.
-2. In **Tab 2**, sign in to [the Teradata WisdomAI instance](https://teradata.wisdom.ai).
-3. Open **Domains → CSA Workshop - Facilitator**. Use a different domain only if your facilitator assigns it.
-4. Confirm that you can open **Context** and see the prepared airline material. If the domain or Context is unavailable, ask the facilitator to check your access. A successful application login alone does not grant domain access.
-5. For the exercises below, use **New chat**, keep **Ask** selected, select **CSA Workshop - Facilitator** in the chat's domain selector, and choose **Thinking** if that mode is available. Recheck the selected domain each time you start a new chat.
+No Git installation or Python is required. Read Markdown files directly on GitHub. To read a CSV, click its filename in the file list; **Raw** shows the original text when GitHub's table preview is inconvenient. Downloading a ZIP is optional until you want an offline copy.
 
-**Use September 2026 throughout.** “Latest month” and “this month” can give different results as time passes. Wait for each answer to finish before asking its follow-up.
+## How we will work
 
-This is a shared, prepared domain. Inspect existing context and runs; leave configuration changes and training/evaluation execution to the facilitator unless you have been assigned your own editable copy.
+Each module follows **explain → inspect → build → test → explain back**. Work individually or with your assigned group, and record your own decisions and results using the workbook's copyable exercise log.
 
-## Step 1 — establish the financial baseline
+Before making changes, confirm your **practice domain** with the instructor. `CSA Workshop - Facilitator` is the reference; it is not automatically your personal editing area. If no editable practice copy is assigned, draft the requested knowledge, metric, skill, question, or evaluation case in your exercise log while the instructor demonstrates saving and testing it. You can still complete the learning checks. Do not change shared connections, permissions, or another group's context.
 
-**Do:** In a new chat scoped to the workshop domain, copy and send:
+The data connection is already provisioned. Domain-building exercises focus on choosing the right sources, their grain and relationships, and the context needed for a business question. You are not expected to configure all 45 source objects or mark every table with a primary key during class.
 
-```text
-For September 2026, show total route revenue, operating income,
-operating margin, passenger-count load factor, and distance-weighted
-load factor. Use the route-month financial view. State the reporting
-date basis and formulas. Include exact financial totals to two decimal
-places and explain any limitations on the monetary units.
-```
+## Three-hour agenda
 
-**Check:** The answer names a source and reporting period, distinguishes the two load factors, and explains the calculations. Use the following as reference checkpoints for the original demonstration data, not as numbers to force into an answer:
+Times are relative to the workshop start. The schedule includes a ten-minute break.
 
-| Measure | September 2026 reference |
-| --- | ---: |
-| Route revenue | 64,612,818.33 source monetary units |
-| Operating income | 6,860,708.98 source monetary units |
-| Operating margin | About 10.62% |
-| Passenger-count load factor | About 85.0% |
-| Distance-weighted load factor | About 85.3% |
+| Time | Module | What you will produce |
+| --- | --- | --- |
+| 00:00–00:10 | Orientation and the learning model | Your business question and exercise log |
+| 00:10–00:30 | 1. Domains and data meaning | A small domain design: sources, grain, date basis, join risk |
+| 00:30–01:00 | 2. Context building | One metadata improvement, knowledge entry, and synonym set |
+| 01:00–01:25 | 3. Metrics, entities, and skills | A checked metric, entity explanation, and short analytical skill |
+| 01:25–01:35 | Break | Instructor checks progress and pending jobs |
+| 01:35–02:05 | 4. Training and reviewed queries | One reviewed question/SQL decision with evidence |
+| 02:05–02:35 | 5. Evaluation sets | Three test-case designs and a failure investigation |
+| 02:35–02:50 | 6. Storage, derived data, and retrieval | A grain explanation and checked document/note citation |
+| 02:50–03:00 | 7. Teach-back and recap | A reproducible answer and explanation of how you would improve it |
 
-If your answer differs, check the selected domain, month, source and filters with the facilitator before continuing. A currency symbol alone does not establish the source currency.
+**At each time block, follow the matching module in [WORKSHOP_LABS.md](WORKSHOP_LABS.md).** The instructor will tell you when to move on. Keep optional extensions for after class if an exercise or background job takes longer than expected.
 
-**Explain:** “A full aircraft and a profitable route are different questions. These measures establish the starting point for our investigation.”
+## Concepts you must be able to distinguish
 
-## Step 2 — identify where to investigate
+| Concept | Its purpose | Question it answers |
+| --- | --- | --- |
+| Domain | Select data and context for a subject | What information belongs in scope? |
+| Metadata and knowledge | Describe structure and business meaning | What does this data mean, and how should it be used? |
+| Synonym | Connect alternative names for a concept | Does “NPS” mean “Net Promoter Score”? |
+| Metric | Specify a business calculation | How do we calculate NPS or margin? |
+| Entity | Identify and name a business object | Which route, aircraft, or product are we discussing? |
+| Skill | Specify a reusable analytical procedure | What steps should a route review follow? |
+| Training examples | Generate and inspect candidate matches for example questions | Is this a suitable answer or SQL example to review? |
+| Reviewed query | Retain an approved question/SQL example | Which query have we checked and accepted? |
+| Evaluation set | Test expected results and behaviors | Does the system handle these cases correctly after changes? |
 
-**Do:** Stay in the same conversation and send:
+**Training is not the same as evaluation.** Training examples support setup and review; they do not retrain the underlying language model. Keep separate holdouts to test beyond the examples used during preparation. An accepted query or passing evaluation label still needs a defensible review process.
 
-```text
-For September 2026, show the five routes with the lowest operating
-income. Include route code, revenue, operating cost, operating income,
-operating margin, passenger-count load factor, RASM, and CASM.
-Use the route-month view and explain the units.
-```
+See [GLOSSARY.md](GLOSSARY.md) for the complete working glossary, including grain, cardinality, snapshots, ground truth, assertions, RAG, and citations.
 
-**Check:** There are up to five routes, ordered by lowest operating income. RASM is revenue per available seat mile; CASM is operating cost per available seat mile. Neither is automatically expressed in cents.
+## Your end-of-class checklist
 
-Copy one **route code actually returned**. In the next prompt, replace `[ROUTE]` with that code; do not send the square-bracket placeholder unchanged:
+You should be able to:
 
-```text
-For [ROUTE], compare September 2026 with August 2026 and September 2025.
-Show revenue, operating income, operating margin, and passenger-count
-load factor. Describe the observed changes and identify questions
-that require more evidence. Do not infer causes from the comparison alone.
-```
+- State a source's grain and choose an appropriate event date.
+- Write useful knowledge and a synonym without confusing either with a metric.
+- Explain a metric's numerator, denominator, units, and zero handling.
+- Distinguish an entity from an analytical skill.
+- Inspect generated SQL and justify accepting or rejecting it.
+- Design an evaluation case and investigate a failure without changing the expectation just to get a pass.
+- Check a citation and distinguish synthetic teaching material from actual business evidence.
+- Hand another student a prompt, source/date basis, checked result, and limitation they can reproduce.
 
-**Explain:** “We have moved from a network total to a specific investigation. The comparison shows what changed; it does not prove why.”
+## If something is missing or fails
 
-## Step 3 — examine customer experience separately
-
-**Do:** Start a **new chat**, select the workshop domain again, and send:
-
-```text
-For September 2026 using survey date, show the valid NPS response count,
-promoter count, passive count, detractor count, NPS, and average
-recommendation score. Use the passenger survey view. Explain the
-eligibility rules and why NPS is different from an average score.
-```
-
-**Check:** Scores 9–10 are promoters, 7–8 are passives, and 0–6 are detractors. Valid scores 0–10 form the NPS denominator. In the original demonstration data, reference counts were 7,029 survey records, 3,705 promoters and 1,146 detractors, with NPS about 36.4. Confirm the answer's valid-response count rather than assuming every record is eligible.
-
-NPS is a score between −100 and +100. It is not the mean recommendation score. Survey-date responses and route-month financials describe different populations; do not join their detail rows to add up revenue.
-
-**Explain:** “NPS is the percentage of promoters minus the percentage of detractors. Passives are included in the denominator.”
-
-## Step 4 — inspect how the domain knows what you mean
-
-**Do:** Open **Domains → CSA Workshop - Facilitator → Context**. Inspect these existing items:
-
-1. **Knowledge:** find **Travel versus booking period**. Read why flight date and booking date answer different questions.
-2. **Synonyms:** find **Net Promoter Score** and confirm **NPS** is listed.
-3. **Metrics:** open **Survey_NPS** and **Operating_Margin_%**, one at a time. Inspect the formulas. Exit using **Cancel**; if prompted, choose **Discard changes**. Do not select Save during this inspection.
-
-**Check:** NPS uses valid survey responses. Operating margin is `100 × SUM(operating_income) / SUM(total_revenue)`, with a zero-denominator guard. Margin can be negative for losses. Combine totals before dividing; do not simply average route margins.
-
-**Explain:** “Synonyms identify the concept. Metrics define the calculation. Knowledge explains how to interpret and use the data.”
-
-**Glossary:** A **grain** is what one row represents. A **denominator** is the total or eligible population underneath a ratio. A **ratio of sums** adds the relevant values first, then divides their totals.
-
-## Step 5 — use an analytical skill
-
-**Do:** In **Context → Skills**, open **Airline route profitability review** and read its procedure. Close without saving, then return to a new, domain-scoped chat and send:
-
-```text
-Use the Airline route profitability review skill to review September
-2026 route profitability against budget. Show the five largest negative
-operating-income gaps in source monetary units. Include actual income,
-budget income, the gap, and relevant revenue and margin context.
-State the source, period basis, and limitations.
-```
-
-**Check:** The answer compares actuals with budget and distinguishes the size of a gap from a percentage rate. Where the interface shows skill usage, inspect it. An answer that merely follows similar steps is not proof that a particular skill was retrieved.
-
-**Explain:** “A skill is a reusable analytical procedure: the steps we want followed for this kind of investigation.”
-
-The readable version is in [the route profitability skill](skills/airline-route-profitability-review.md).
-
-## Step 6 — retrieve and check cited text
-
-**Do:** Start a new, domain-scoped chat and send:
-
-```text
-Using only the WORKSHOP_SYNTHETIC service notes, summarize
-baggage-related feedback. Cite the supporting note IDs and clearly
-state that the notes are invented workshop material, not actual
-passenger evidence.
-```
-
-**Check:** Open the citations. The baggage notes should be **SYN-002** and **SYN-007**. Confirm the cited text supports the summary. Do not attribute these invented notes to the route selected in Step 2.
-
-Then send:
-
-```text
-Using only WORKSHOP_SYNTHETIC_facilitator_brief.txt (WS-BRIEF-001),
-what must each group hand to the next group, and what defines completion
-of the practice exercise? Cite the document and state that it is
-invented workshop material, not real airline policy.
-```
-
-**Check:** The handoff includes the business question, exact prompt, source and period basis, one checked number, metric definition, limitations, and suggested follow-up. Completion means another group can reproduce the answer and explain the evidence and limitations. Open the document citation.
-
-**Explain:** “Retrieval brings relevant source text into the answer. A citation lets us inspect whether that text actually supports the claim.”
-
-**Optional storage inspection:** In the domain's **Data Sources → Tera Storage**, inspect the existing note table, derived summary and file. The SQL database name may still be `wisdom_storage`. One source row represents one note; one summary row represents one scenario. The summary counts should be baggage 2, service 2, and accessibility, cabin, weather and wifi 1 each. Do not upload duplicate copies.
-
-## Step 7 — see how answers are reviewed and tested
-
-**Do:** Return to the workshop domain and inspect these three areas:
-
-1. **Context → Reviewed Queries:** open an existing September 2026 route or survey example. Compare the question with its SQL. Check the source table, date filter, aggregation and denominator. Close without saving.
-2. **Training:** inspect an existing question, its reference guidance and its accepted SQL match. Notice that a candidate and the accepted SQL can differ. Do not start training or accept new matches in the shared facilitator domain.
-3. **Evaluation → Evaluation Sets:** open a set and read one test's question and expectation. In the inspected facilitator domain, **Evaluation Set 1** had 16 cases and **Evaluation Set 2** had 5; names may differ in an attendee copy. Use the contents to identify the suite. Then open **Run History → View Group** for that set and inspect a completed case, its answer, score and explanation.
-
-**Check:** A reviewed query is a vetted question/SQL example. Training examples support setup and review; they do not retrain the underlying language model. Evaluation cases test expected results or behavior. A passing judge score should still be checked against the answer and source evidence.
-
-If no runs are present in your assigned copy, review the repository's [evaluation protocol](evaluations/README.md) and [recorded reference evidence](evidence/validation-log.md) with the facilitator. You do not need to create or run a suite to finish this demo flow. Original proddemo pass rates are historical evidence, not a claim about a new environment.
-
-**Explain:** “Training examples help establish expected behavior. Separate holdout evaluations check behavior beyond those examples and help catch regressions.”
-
-## Step 8 — demonstrate a sensible boundary
-
-**Do:** In a new, domain-scoped chat, send:
-
-```text
-Convert September 2026 route revenue to euros.
-```
-
-**Check:** Without a documented source currency and exchange-rate basis, the answer should ask for those inputs before presenting converted figures. If it assumes either, flag the response for the facilitator. Do not accept relabeled source amounts as a currency conversion.
-
-**Explain:** “A useful answer includes knowing what additional information is needed.”
-
-## Step 9 — deliver your five-minute demo
-
-**Do:** Present this sequence to another attendee:
-
-1. Open with the business question at the top of this page.
-2. Show your financial baseline from Step 1.
-3. Show one actual route result from Step 2 and explain the next investigation question.
-4. Show one metric definition or checked citation as evidence of how the answer was produced.
-5. Close with one question you would validate with a customer and the data needed to answer it.
-
-Use the [prospect talk track](PROSPECT_TALK_TRACK.md) for presenter wording. Its original cockpit references describe the proddemo reference environment; for this attendee exercise, use the Teradata domain and the chat results you just produced.
-
-**Done means:** another attendee can repeat your prompt, find the same source and period, check one number or citation, and explain one limitation. Record your exact prompt, source/date basis, checked result and limitation. Flag a mismatch rather than inventing the expected answer.
-
-## Optional — explore the prepared app
-
-In the Teradata instance, open **Apps → Passenger Experience Scorecard**, the app observed for this facilitator domain. Explore its available views and identify one question it makes you want to ask in chat. If the facilitator provides a different app name, use that app. An app is not required for Steps 1–9.
-
-The original **Airline Command Cockpit** lives in the proddemo reference environment. Do not switch to proddemo or assume you need a second login to complete the attendee flow.
-
-## If you get stuck
-
-| Problem | What to do |
+| Situation | Next action |
 | --- | --- |
-| GitHub 404 or sign-in screen | Sign in with an account granted repository access, or use the workshop ZIP supplied by the facilitator. |
-| Domain is missing or Context is unavailable | Ask the facilitator to check your domain access; do not create a replacement domain. |
-| Chat answers an unrelated subject | Start a new chat and explicitly select CSA Workshop - Facilitator. |
-| Numbers differ from the checkpoints | Check September 2026, source, date basis and filters with the facilitator. |
-| Notes/file cannot be found | Check the selected domain and ask the facilitator to confirm the prepared storage content and file processing. |
-| A section, run or app is missing | Tell the facilitator which step and item is missing; do not rebuild it mid-exercise. |
-| Inspection opens an editor | Exit with Cancel, then Discard changes if prompted. |
+| GitHub shows 404 | Use an account granted access, or the copy supplied by the instructor. |
+| The domain or an editing control is missing | Ask the instructor to check your assigned domain and role; continue drafting in your exercise log. |
+| A prompt returns unexpected figures | Check domain, period, source, grain, and filters. Record the discrepancy; do not force the reference numbers. |
+| Training/evaluation is still running | Save the job/reference, continue designing your checks, and inspect an existing completed example with the instructor. |
+| A metric inspection asks to discard changes | If you were only inspecting, choose Cancel, then Discard changes. Do not save unintentionally. |
+| A prepared asset is absent | Tell the instructor which module and asset; use the linked repository example while the issue is resolved. |
 
-## Where the other repository files fit
+## Repository map
 
-| Material | When to use it |
+| File or folder | Use |
 | --- | --- |
-| [PROMPTS.md](PROMPTS.md) | Additional questions after this numbered flow. |
-| [WORKSHOP_LABS.md](WORKSHOP_LABS.md) | Deeper technical exercises led by the facilitator. |
-| [INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md) | Instructor agenda, team roles and preparation. |
-| [DOMAIN_DEPLOYMENT_GUIDE.md](DOMAIN_DEPLOYMENT_GUIDE.md) | Instructor/builder reference for creating a domain; not an attendee prerequisite. |
-| `context/`, `training/`, `evaluations/`, `skills/`, `storage/` | Reusable reference/import assets; not files every attendee must upload. |
-| [CAPABILITY_COVERAGE.md](CAPABILITY_COVERAGE.md) and `evidence/` | Recorded scope, checks and limitations. |
-| `build_*.py`, `validate_assets.py` | Maintainer tools; not needed to follow the demo. |
+| [WORKSHOP_LABS.md](WORKSHOP_LABS.md) | Student workbook for the three-hour class |
+| [INSTRUCTOR_CHEAT_SHEET.md](INSTRUCTOR_CHEAT_SHEET.md) | Quick instructor clock, cues, answers and recovery |
+| [INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md) | Detailed instructor teaching cards and preparation |
+| [GLOSSARY.md](GLOSSARY.md) | Definitions used in class; expanded from our walkthrough draft |
+| [DEMO_WALKTHROUGH.md](DEMO_WALKTHROUGH.md) | Optional short demo rehearsal after the concept workshop |
+| [PROMPTS.md](PROMPTS.md) and [PROSPECT_TALK_TRACK.md](PROSPECT_TALK_TRACK.md) | Extra questions and customer-facing storytelling |
+| `context/` and `skills/` | Metadata, knowledge, metrics, synonyms, entities, relationships, reviewed SQL, and skill examples |
+| `training/` and `evaluations/` | Example inputs and test cases; choose the small subset assigned in class |
+| `storage/` | Invented service notes, a facilitator brief, and derived-data SQL |
+| [DOMAIN_DEPLOYMENT_GUIDE.md](DOMAIN_DEPLOYMENT_GUIDE.md) | Detailed builder reference for preparing or adapting an environment |
+| `evidence/` and [CAPABILITY_COVERAGE.md](CAPABILITY_COVERAGE.md) | Historical source checks, validation results, scope, and limitations |
+| `build_*.py` and `validate_assets.py` | Maintainer tools; not required for students |
 
-Make revisions in [ali-wisdom's working repository](https://github.com/ali-wisdom/wisdomai-teradata-airline-workshop), then synchronize reviewed content to [the shared WisdomAI repository](https://github.com/datawisdomai/wisdomai-teradata-airline-workshop). Students should use the version supplied by the facilitator. Repository visibility and access can change; a ZIP download does not grant application or domain access.
+Use **September 2026** for the fixed airline exercises. Dates, counts, and evaluation pass rates recorded from the original proddemo environment are reference evidence, not a guarantee about every workshop copy. Use the assigned Teradata instance; a second proddemo login is not required.
+
+Edits are maintained in [ali-wisdom's working repository](https://github.com/ali-wisdom/wisdomai-teradata-airline-workshop) and synchronized to [the shared WisdomAI repository](https://github.com/datawisdomai/wisdomai-teradata-airline-workshop). The instructor will identify the class version.
