@@ -8,8 +8,8 @@
 
 | Elapsed | Say / show | Have students do | Check before moving on |
 | --- | --- | --- | --- |
-| 00:00–00:10 | Domain/context → question → answer/SQL → review → evaluation | Pick a question; start their workbook log; confirm practice domain | They know where they may edit. |
-| 00:10–00:30 | Grain before joins; three source views; one key/relationship | Draw source/grain/date map; propose one metadata improvement | Route-month ≠ flight leg ≠ survey response. |
+| 00:00–00:10 | Domain/context → question → answer/SQL → review → evaluation | Pick a question; start their workbook log; confirm creation access/source | They know the source and planned domain name. |
+| 00:10–00:30 | Create New Domain first; then grain before joins | Create own named domain; map source/grain/date; propose metadata | New domain uses the right source; grains differ. |
 | 00:30–01:00 | Knowledge = interpretation; synonym = vocabulary | Build/draft one atomic knowledge entry and one synonym; spot-test | The rule is meaningful, scoped, and not conflicting. |
 | 01:00–01:25 | Metric = calculation; entity = object; skill = procedure | Specify/test a metric; inspect Route; draft a short skill | Explain formula, denominator, units, zero handling. |
 | 01:25–01:35 | **Break** | Save logs | Check access and pending jobs. |
@@ -37,7 +37,9 @@
 
 ## Guardrails and recovery
 
-- Use assigned practice domains. If unavailable, students draft artifacts in their logs and you demonstrate the save/test. Do not have everyone edit the facilitator domain.
+- Prepare **one shared connection and one facilitator domain**, not 25 domains. Confirm attendee creation/source permissions before class. Students create `CSA Workshop - <first-name>-<last-name>` during Module 1.
+- Creation: **Domains → Add domain → Domain Name → Select Data Source → wisdomai under Partner Lab → Create Domain**. Use the confirmed connection/database pair; another wisdomai may be listed under a different connection.
+- Students edit/test in their own new domains. Inspect completed examples and storage in the facilitator domain. If access is blocked, resolve it and use draft-and-observe temporarily; do not have everyone edit the reference.
 - If a job runs long, review a completed example and record the new job as pending. Do not call a queued job a pass.
 - If time slips, cut the optional app tour and extra demo prompts; preserve SQL review and evaluation diagnosis.
 - Close inspection editors with **Cancel → Discard changes** if prompted. Do not save by accident.

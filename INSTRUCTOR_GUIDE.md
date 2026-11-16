@@ -11,8 +11,9 @@ For 25 attendees, use five groups of five if practical. Roles: question owner, c
 ## Before the room opens
 
 - Confirm Teradata instance and GitHub/ZIP access. Use **CSA Workshop - Facilitator** as the prepared reference.
-- Assign five editable group domains using the approved existing connection, or announce **draft-and-observe** mode. Do not let 25 students edit the reference simultaneously. Practice domains and permissions must be prepared separately; their existence is not guaranteed by the repository.
-- In editable copies, decide which context items are intentionally absent or will use team-specific names. Retain a checked reference. Avoid conflicting duplicate rules in a complete clone.
+- Provide one approved, working shared connection plus the prepared facilitator domain. **Do not pre-create 25 student domains:** students create their own named domains in Module 1. Peer groups can collaborate while each student owns a workspace.
+- Before class, test an attendee-role account for **Domains → Add domain**, access to **Partner Lab → wisdomai** (or the confirmed replacement), and editing/training/evaluation controls. Your own administrator access does not establish student access. If creation is blocked, resolve access; use draft-and-observe only as a temporary fallback.
+- Students start from their newly created domains, not a promised complete clone. Check what metadata/context is inherited from the source; avoid duplicating existing items. Keep completed examples in the facilitator domain for inspection and recovery.
 - Rehearse one knowledge edit, one metric save, one training question, review/accept controls, and a three-case evaluation in the actual instance. UI controls and job duration can vary.
 - Have one completed training example and evaluation run ready in case jobs outlast a module. Use only evidence you can show.
 - Prepare a small failure example: wrong event date, NPS as average score, or abbreviated financial totals failing an exact-value assertion. Explain whether it is an archived failure or a live one; do not pretend the reference domain is broken.
@@ -24,7 +25,7 @@ For 25 attendees, use five groups of five if practical. Roles: question owner, c
 | Elapsed | Module | Teach / demonstrate | Student output |
 | --- | --- | --- | --- |
 | 00:00–00:10 | Orientation | Explain the domain/context → question → SQL/answer → review → evaluation cycle. | Business question and log |
-| 00:10–00:30 | 1. Domain design | Compare three grains; inspect one key/relationship. | Source/grain/date map, metadata improvement |
+| 00:10–00:30 | 1. Domain design | Walk through Create New Domain; compare three grains. | New student domain, source/grain/date map, metadata improvement |
 | 00:30–01:00 | 2. Context building | Demonstrate one atomic knowledge entry and synonym. | Knowledge + synonym + spot check |
 | 01:00–01:25 | 3. Metric/entity/skill | Explain the distinctions; show NPS, Route and a route-review skill. | Metric specification, entity explanation, skill draft |
 | 01:25–01:35 | Break | Check progress and background jobs. | Saved log |
@@ -43,19 +44,21 @@ Protect the training and evaluation blocks. If time slips, shorten the optional 
 
 **Ask:** “Can SQL execute successfully and still answer the wrong question?” Expected: yes—wrong date, grain, denominator, population, or units.
 
-**Do:** confirm domain assignments and editing rules, then have each student start the workbook log. Avoid a lengthy product/menu tour.
+**Do:** confirm the source choice, planned student domain names, creation permissions and editing rules, then have each student start the workbook log. Avoid a lengthy product/menu tour.
 
 ### 1. Domain design — 20 minutes
 
 **Say:** “A domain brings relevant sources and business context into scope. Grain tells us what one row means before we combine data.”
 
-**Show:** route-month P&L, flight and survey views. Use table/column descriptions rather than reading all 45 objects.
+**Show the creation flow first:** Domains → Add domain → Domain Name → Select Data Source → wisdomai under Partner Lab → Create Domain. Use the exact connection/database pair confirmed for class. Do not select Connect new Data store or MCP server or Add Files. Have each student create a unique domain and record its name.
+
+Then show route-month P&L, flight and survey views. Spend about five minutes on creation, five on source inspection, and ten on the domain map/metadata improvement; do not walk through all 45 objects.
 
 **Expected:** route-month financials use month-end period; flights use flight date; survey analysis can use survey date. A route key repeats across months. Primary keys are verified, not guessed; the original key checklist does not require every object to have a single-column key.
 
 **Watch:** students equating relationships with permission to sum independently detailed facts. Ask which measure will be repeated after the proposed join.
 
-**Recovery:** if metadata editing is unavailable, students submit the exact proposed description. If connectivity fails, use the repository's schema reference and an existing completed answer; label this as fallback evidence.
+**Recovery:** if domain creation or the source is unavailable, resolve the attendee permission/source-registration issue before students select arbitrary alternatives. Temporarily have students draft the map and proposed description. If metadata editing is unavailable, students submit the exact proposed description. If connectivity fails, use the repository's schema reference and an existing completed answer; label this as fallback evidence.
 
 ### 2. Context building — 30 minutes
 

@@ -6,9 +6,10 @@ Follow the timing in [README.md](README.md). Keep [GLOSSARY.md](GLOSSARY.md) ope
 
 1. Sign in to [teradata.wisdom.ai](https://teradata.wisdom.ai).
 2. Find **CSA Workshop - Facilitator**, the reference domain.
-3. Confirm your assigned editable practice domain with the instructor. Make changes only there. If no practice copy is assigned, use the **draft-and-observe path**: write the artifacts below in your log and watch the instructor save and test a selected example. Do not overwrite the reference domain.
+3. Confirm that **Domains → Add domain** is available and that you can access the instructor-confirmed existing source. You will create your own domain in Module 1; you are not expected to arrive with one already created. If access is missing, tell the instructor and temporarily use the **draft-and-observe path** while it is resolved. Do not overwrite the reference domain.
 4. Choose a business question: route profitability, flight reliability, or customer experience. Use September 2026 for the fixed exercises.
-5. Copy the following log into your own notes. Each student keeps a log even when working in a group.
+5. Use the **facilitator domain to inspect completed examples** and **your new student domain to build and test**. Switch deliberately; check the domain name before every save or chat.
+6. Copy the following log into your own notes. Each student keeps a log even when working in a group.
 
 ```text
 Student/group:
@@ -34,21 +35,28 @@ Read the concept table in the README. In your log, write one business question a
 
 **Learn:** domain, data source, metadata, grain, key, relationship, and cardinality. See the first two glossary sections.
 
-**Inspect** (about 5 minutes):
+**Create your domain** (about 5 minutes):
 
-1. Open **Domains → your assigned domain → Data Sources**.
-2. Locate `ZAL_VW_ROUTE_PNL_MONTHLY`, `ZAL_VW_FLIGHT`, and `ZAL_VW_PASSENGER_SURVEY` in the airline source. Display names may be friendlier; match the physical names.
-3. Inspect descriptions and columns. Identify the reporting date and what one row represents for each.
+1. Open **Domains → Add domain**. The dialog is titled **Create New Domain**.
+2. In **Domain Name**, enter `CSA Workshop - <first-name>-<last-name>`. Replace the placeholders with your name and add a short suffix if that name is already in use. Record the name in your exercise log.
+3. Open **Select Data Source**. Select **wisdomai under Partner Lab**, the connection/database pair used by the inspected facilitator domain, unless your instructor supplies a different pair. There may be another wisdomai under a different connection; do not select solely by database name.
+4. Leave **Connect new Data store or MCP server** and **Add Files** unselected for this exercise. You are reusing the existing data source, not configuring credentials or uploading a dataset.
+5. Click **Create Domain**. Confirm your new domain name is shown. If **Add domain** or the required source is missing, ask the instructor to resolve access; do not choose an unrelated database to get past the form.
+6. From now on, edit context and run chat tests in **your new domain**. Recheck the chat's domain selector each time you start a conversation. The facilitator domain remains the reference.
 
-**Build or draft** (about 8 minutes):
+**Inspect the source** (about 5 minutes):
 
-4. Write a small domain design for your business question: which of those sources belong in scope, their grains and date bases, and one tempting but unsafe join.
-5. Inspect one existing key or relationship with the instructor. Explain why a route key alone is not unique in a route-month table. You do not need to mark keys on all 45 objects.
-6. Propose one table or column description that would help another engineer choose the correct source. Save it only in your practice domain if the instructor has enabled this exercise; otherwise record the proposed text.
+7. Open **Data Sources → wisdomai** in your new domain. Locate `ZAL_VW_ROUTE_PNL_MONTHLY`, `ZAL_VW_FLIGHT`, and `ZAL_VW_PASSENGER_SURVEY`. Match physical names if display names differ. If these views are not available, pause and ask the instructor to check the selected connection/database and source registration; do not create another connection.
+8. Inspect descriptions and columns. Identify the reporting date and what one row represents for each. The source may expose other airline objects; use these three for this first exercise rather than trying to configure every object.
 
-**Check and explain back** (about 7 minutes): your map should distinguish route-month financials, one flight leg, and one survey response. A Many to One relationship describes key matching; it does not make every detail-fact join safe for summing revenue. Combining subjects often requires separate aggregation first.
+**Build the design and check it** (about 10 minutes):
 
-**Deliver:** source/grain/date map and one metadata improvement.
+9. Write a domain design for your business question: which sources belong in scope, their grains and date bases, and one tempting but unsafe join.
+10. Inspect one existing key or relationship with the instructor, or the repository's schema/relationship reference if none is yet configured in your new domain. Explain why a route key alone is not unique in a route-month table. You do not need to mark keys on all 45 objects.
+11. Propose one table or column description that would help another engineer choose the correct source. Save it in your new domain if the controls are available; otherwise record the exact proposed text and flag the access issue.
+12. Explain your map to a neighbor. Distinguish route-month financials, one flight leg, and one survey response. A Many to One relationship describes key matching; it does not make every detail-fact join safe for summing revenue. Combining subjects often requires separate aggregation first.
+
+**Deliver:** your new domain name, source/grain/date map, and one metadata improvement. New domains may not contain all the curated context and storage examples in the facilitator domain; the following modules tell you when to inspect the reference and when to build in your own workspace.
 
 ## 2. Build business context — 00:30–01:00
 
@@ -56,7 +64,7 @@ Read the concept table in the README. In your log, write one business question a
 
 **Inspect** (about 5 minutes):
 
-1. Open **Context → Knowledge** and find **Travel versus booking period** and **Snapshot measures**.
+1. In **CSA Workshop - Facilitator**, open **Context → Knowledge** and find **Travel versus booking period** and **Snapshot measures**.
 2. Open **Synonyms** and find **Net Promoter Score → NPS**.
 3. Read [context/knowledge.csv](context/knowledge.csv) and [context/synonyms.csv](context/synonyms.csv) as examples, not as files to re-import into the reference domain.
 
@@ -64,7 +72,7 @@ Read the concept table in the README. In your log, write one business question a
 
 4. Write one atomic knowledge entry for a real ambiguity in your chosen question. Use this pattern: **when the user asks X, use Y, because Z; clarify if A is missing**.
 5. Write one synonym set. State the canonical concept and its alternative wording. Do not merge distinct concepts, such as passenger-count and distance-weighted load factor, into interchangeable synonyms.
-6. Save those two items in your assigned practice domain using the corresponding Context section's add control, or write their exact text in your log. Use a team-specific name for any new item; do not duplicate or edit an existing reference entry accidentally.
+6. Switch to **your new student domain** and save those two items using the corresponding Context section's add control, or write their exact text in your log. Use a team-specific name for any new item; do not duplicate or edit an existing reference entry accidentally.
 
 Example knowledge draft:
 
@@ -88,12 +96,12 @@ what you need to know if “September sales” is ambiguous.
 
 **Learn:** metric = calculation; entity = identifiable business object; skill = analytical procedure.
 
-1. **Metrics:** inspect `Survey_NPS` and `Operating_Margin_%` in Context. Opening a metric can open an editor; use **Cancel → Discard changes** to exit an inspection without saving.
+1. In **CSA Workshop - Facilitator**, inspect the completed examples below. **Metrics:** inspect `Survey_NPS` and `Operating_Margin_%` in Context. Opening a metric can open an editor; use **Cancel → Discard changes** to exit an inspection without saving.
 2. Write NPS in business terms: promoters 9–10 minus detractors 0–6, divided by all valid 0–10 responses, multiplied by 100. Passives 7–8 remain in the denominator. It is a score, not the average rating.
 3. Write operating margin as `100 × SUM(operating_income) / NULLIF(SUM(total_revenue), 0)`. State its grain, date filter, units, and zero-denominator behavior. It can be negative for losses.
-4. **Build or draft one metric specification:** name, source, formula, eligible records, period basis, unit/scale, and a simple test. If building it in a practice domain, use the instructor's assigned name and an expression based on one source table. Do not overwrite a reference metric.
-5. **Entities:** open the existing Route entity. Identify its ID and name columns. Explain why a route is an entity and operating margin is a metric. If the entity is absent, inspect [context/entities.csv](context/entities.csv).
-6. **Skills:** open **Airline route profitability review**, or read [its Markdown](skills/airline-route-profitability-review.md). Draft a short skill for your question: resolve the period; select the source/grain; calculate the measures; compare; state limitations. Save only in your practice domain if assigned.
+4. **Build or draft one metric specification:** name, source, formula, eligible records, period basis, unit/scale, and a simple test. If building it, switch to **your new student domain** and use the instructor's assigned metric name and an expression based on one source table. Do not overwrite a reference metric.
+5. **Entities:** return to the facilitator domain and open the existing Route entity. Identify its ID and name columns. Explain why a route is an entity and operating margin is a metric. If the entity is absent, inspect [context/entities.csv](context/entities.csv).
+6. **Skills:** in the facilitator domain, open **Airline route profitability review**, or read [its Markdown](skills/airline-route-profitability-review.md). Draft a short skill for your question: resolve the period; select the source/grain; calculate the measures; compare; state limitations. Switch back to your student domain to save the new skill if this exercise is enabled.
 7. In a domain-scoped chat, test your metric question or skill. Where the answer exposes skill usage, inspect it; similar prose alone does not prove a skill was retrieved.
 
 **Check:** 20 units of operating income over 100 units of revenue gives 20% margin. For routes with income/revenue 10/100 and 90/300, combined margin is 25%, not the 20% unweighted average of their margins. With 60% promoters and 20% detractors, NPS is 40.
@@ -138,7 +146,7 @@ by route code using flight date.
 
 **Inspect** (about 5 minutes):
 
-1. Open **Evaluation → Evaluation Sets**. In the inspected facilitator domain, **Evaluation Set 1** contained 16 cases and **Evaluation Set 2** contained 5. Names can differ in other copies; identify a suite by its questions.
+1. In **CSA Workshop - Facilitator**, open **Evaluation → Evaluation Sets**. In the inspected facilitator domain, **Evaluation Set 1** contained 16 cases and **Evaluation Set 2** contained 5. Names can differ in other copies; identify a suite by its questions.
 2. Read one question and its expectation. Then open **Run History → View Group** and inspect a completed case: answer, reference SQL/assertions, score, and explanation.
 
 **Build or draft three cases** (about 10 minutes):

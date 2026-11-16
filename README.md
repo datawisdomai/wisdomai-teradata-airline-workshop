@@ -17,9 +17,13 @@ No Git installation or Python is required. Read Markdown files directly on GitHu
 
 Each module follows **explain → inspect → build → test → explain back**. Work individually or with your assigned group, and record your own decisions and results using the workbook's copyable exercise log.
 
-Before making changes, confirm your **practice domain** with the instructor. `CSA Workshop - Facilitator` is the reference; it is not automatically your personal editing area. If no editable practice copy is assigned, draft the requested knowledge, metric, skill, question, or evaluation case in your exercise log while the instructor demonstrates saving and testing it. You can still complete the learning checks. Do not change shared connections, permissions, or another group's context.
+**Each student creates a uniquely named domain during Module 1. You do not need 25 domains created in advance.** The instructor provides one working Teradata connection and the prepared `CSA Workshop - Facilitator` reference domain. Students reuse the connection; they do not create database accounts, copy the warehouse, or enter connection credentials.
 
-The data connection is already provisioned. Domain-building exercises focus on choosing the right sources, their grain and relationships, and the context needed for a business question. You are not expected to configure all 45 source objects or mark every table with a primary key during class.
+Before class, the instructor must confirm that attendee roles can use **Domains → Add domain** and access the workshop source. In the inspected instance the source is **wisdomai under Partner Lab**; another connection also exposes a database named wisdomai, so use the connection/database pair the instructor confirms. This workflow was inspected using the facilitator's account; attendee permissions still need a pre-work check.
+
+In Module 1, create `CSA Workshop - <first-name>-<last-name>` (add a suffix if needed), then use that domain for your edits and chat tests. Keep `CSA Workshop - Facilitator` unchanged as the reference. If permissions prevent creation, tell the instructor and temporarily draft artifacts in your log while the access issue is resolved; this is a fallback, not an assumption that the instructor has prebuilt your domain.
+
+The connection is already provisioned. Domain building includes creating your workspace, choosing the existing source, inspecting grains and relationships, and adding the context needed for a business question. You are not expected to configure all 45 source objects or mark every table with a primary key during class.
 
 ## Three-hour agenda
 
@@ -28,7 +32,7 @@ Times are relative to the workshop start. The schedule includes a ten-minute bre
 | Time | Module | What you will produce |
 | --- | --- | --- |
 | 00:00–00:10 | Orientation and the learning model | Your business question and exercise log |
-| 00:10–00:30 | 1. Domains and data meaning | A small domain design: sources, grain, date basis, join risk |
+| 00:10–00:30 | 1. Domains and data meaning | Your new domain plus a source/grain/date map |
 | 00:30–01:00 | 2. Context building | One metadata improvement, knowledge entry, and synonym set |
 | 01:00–01:25 | 3. Metrics, entities, and skills | A checked metric, entity explanation, and short analytical skill |
 | 01:25–01:35 | Break | Instructor checks progress and pending jobs |
